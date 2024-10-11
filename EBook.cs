@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace BookRentalManagementSystem_V1
 {
-    internal class EBook
+    public class EBook : Book
     {
+        public int FileSize { get; set; }
+        public string Format { get; set; }
+
+        public EBook(int fileSize, string format) : base
+        {
+            FileSize = fileSize;
+            Format = format;
+        }
     }
+
+
 }

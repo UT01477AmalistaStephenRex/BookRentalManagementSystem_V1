@@ -9,11 +9,11 @@ namespace BookRentalManagementSystem_V1
 {
     public class Book
     {
-        private string bookId { get; set; }
-        private string title { get; set; }
-        private string author { get; set; }
-        private decimal rentalPrice { get; set; }
-
+        public string bookId { get; set; }
+        public string title { get; set; }
+        public string author { get; set; }
+        public decimal rentalPrice { get; set; }
+        public int totalBook {  get; set; }=0;
 
         public Book(string bookId, string title, string author, decimal rentalPrice)
         {
@@ -21,6 +21,8 @@ namespace BookRentalManagementSystem_V1
             this.title = title;
             this.author = author;
             this.rentalPrice = rentalPrice;
+            this.totalBook = totalBook++;
+
         }
 
         public override string ToString()
@@ -28,7 +30,7 @@ namespace BookRentalManagementSystem_V1
             return $"{bookId}, title: {title}, author: {author}, rentalPrice: {rentalPrice}";
         }
 
-
+        
        
 
     }
